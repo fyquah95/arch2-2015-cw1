@@ -18,8 +18,8 @@ DEFAULT_OBJECTS = \
 USER_CPU_SRCS = \
     $(wildcard src/$(LOGIN)/mips_cpu.c) \
     $(wildcard src/$(LOGIN)/mips_cpu.cpp) \
-    $(wildcard src/$(LOGIN)/mips_cpu_*.c) \
-    $(wildcard src/$(LOGIN)/mips_cpu_*.cpp)
+    $(wildcard src/$(LOGIN)/**/mips_cpu_*.c) \
+    $(wildcard src/$(LOGIN)/**/mips_cpu_*.cpp)
     
 USER_CPU_OBJECTS = $(patsubst %.c,%.o,$(patsubst %.cpp,%.o,$(USER_CPU_SRCS)))
 
